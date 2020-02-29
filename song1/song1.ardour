@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Session version="3002" name="song1" sample-rate="48000" end-is-free="1" id-counter="622" name-counter="1" event-counter="5491" vca-counter="1">
+<Session version="3002" name="song1" sample-rate="48000" end-is-free="1" id-counter="1502" name-counter="1" event-counter="15487" vca-counter="1">
   <ProgramVersion created-with="Ardour 1:5.12.0-3" modified-with="Ardour 1:5.12.0-3"/>
   <MIDIPorts>
     <Port name="MIDI Clock in" direction="input"/>
     <Port name="MIDI Clock out" direction="output"/>
-    <Port name="MIDI control in" direction="input"/>
+    <Port name="MIDI control in" direction="input">
+      <Connection other="system:midi_capture_1"/>
+    </Port>
     <Port name="MIDI control out" direction="output"/>
     <Port name="MMC in" direction="input"/>
     <Port name="MMC out" direction="output"/>
@@ -76,6 +78,10 @@
   <Selection/>
   <Locations>
     <Location id="319" name="session" start="0" end="384000" flags="IsSessionRange" locked="0" position-lock-style="AudioTime"/>
+    <Location id="1463" name="C" start="120605" end="120605" flags="IsMark" locked="0" position-lock-style="AudioTime"/>
+    <Location id="1472" name="G" start="168000" end="168000" flags="IsMark" locked="0" position-lock-style="AudioTime"/>
+    <Location id="1485" name="A" start="216645" end="216645" flags="IsMark" locked="0" position-lock-style="AudioTime"/>
+    <Location id="1494" name="F" start="265365" end="265365" flags="IsMark" locked="0" position-lock-style="AudioTime"/>
   </Locations>
   <Bundles/>
   <VCAManager/>
@@ -165,7 +171,9 @@
       <Controllable name="solo-iso" id="246" flags="Toggle,RealTime" value="0" solo-isolated="0"/>
       <Controllable name="solo-safe" id="248" flags="Toggle" value="0" solo-safe="0"/>
       <IO name="Guitar" id="260" direction="Input" default-type="midi" user-latency="0">
-        <Port type="midi" name="Guitar/midi_in 1"/>
+        <Port type="midi" name="Guitar/midi_in 1">
+          <Connection other="system:midi_capture_1"/>
+        </Port>
       </IO>
       <IO name="Guitar" id="261" direction="Output" default-type="midi" user-latency="0">
         <Port type="audio" name="Guitar/audio_out 1">
@@ -267,7 +275,9 @@
       <Controllable name="solo-iso" id="337" flags="Toggle,RealTime" value="0" solo-isolated="0"/>
       <Controllable name="solo-safe" id="339" flags="Toggle" value="0" solo-safe="0"/>
       <IO name="Bass" id="351" direction="Input" default-type="midi" user-latency="0">
-        <Port type="midi" name="Bass/midi_in 1"/>
+        <Port type="midi" name="Bass/midi_in 1">
+          <Connection other="system:midi_capture_1"/>
+        </Port>
       </IO>
       <IO name="Bass" id="352" direction="Output" default-type="midi" user-latency="0">
         <Port type="audio" name="Bass/audio_out 1">
@@ -415,7 +425,9 @@
     <Protocol name="Open Sound Control (OSC)" active="0"/>
     <Protocol name="PreSonus FaderPort" active="0"/>
     <Protocol name="PreSonus FaderPort8" active="0"/>
-    <Protocol name="Generic MIDI" active="0"/>
+    <Protocol name="Generic MIDI" feedback="0" feedback-interval="10000" threshold="10" motorized="0" active="1">
+      <Controls/>
+    </Protocol>
     <Protocol name="Mackie" active="0"/>
     <Protocol name="Wiimote" active="0"/>
     <Protocol name="Steinberg CC121" active="0"/>
@@ -439,6 +451,8 @@
       <Window name="midi-connection-manager" visible="0" x-off="-1" y-off="-1" x-size="-1" y-size="-1"/>
       <Window name="idle-o-meter" visible="0" x-off="-1" y-off="-1" x-size="-1" y-size="-1"/>
       <Window name="RPM-54" visible="0" x-off="-1" y-off="-1" x-size="-1" y-size="-1"/>
+      <Window name="RPM-232" visible="0" x-off="-1" y-off="-1" x-size="-1" y-size="-1"/>
+      <Window name="RPM-323" visible="0" x-off="-1" y-off="-1" x-size="-1" y-size="-1"/>
       <Window name="P-54-85" visible="0" x-off="-1" y-off="-1" x-size="-1" y-size="-1" custom-ui="1"/>
       <Window name="P-54-84" visible="0" x-off="-1" y-off="-1" x-size="-1" y-size="-1" custom-ui="1"/>
       <Window name="P-54-86" visible="0" x-off="-1" y-off="-1" x-size="-1" y-size="-1" custom-ui="1"/>
@@ -447,24 +461,22 @@
       <Window name="PM-84-" visible="0" x-off="-1" y-off="-1" x-size="-1" y-size="-1"/>
       <Window name="PM-86-" visible="0" x-off="-1" y-off="-1" x-size="-1" y-size="-1"/>
       <Window name="PM-87-" visible="0" x-off="-1" y-off="-1" x-size="-1" y-size="-1"/>
-      <Window name="RPM-232" visible="0" x-off="-1" y-off="-1" x-size="-1" y-size="-1"/>
+      <Window name="P-232-300" visible="0" x-off="1738" y-off="165" x-size="20" y-size="20" custom-ui="1"/>
       <Window name="P-232-262" visible="0" x-off="-1" y-off="-1" x-size="-1" y-size="-1" custom-ui="1"/>
       <Window name="P-232-264" visible="0" x-off="-1" y-off="-1" x-size="-1" y-size="-1" custom-ui="1"/>
       <Window name="P-232-265" visible="0" x-off="-1" y-off="-1" x-size="-1" y-size="-1" custom-ui="1"/>
+      <Window name="PM-300-" visible="0" x-off="-1" y-off="-1" x-size="-1" y-size="-1"/>
       <Window name="PM-262-" visible="0" x-off="-1" y-off="-1" x-size="-1" y-size="-1"/>
       <Window name="PM-264-" visible="0" x-off="-1" y-off="-1" x-size="-1" y-size="-1"/>
       <Window name="PM-265-" visible="0" x-off="-1" y-off="-1" x-size="-1" y-size="-1"/>
-      <Window name="P-232-300" visible="0" x-off="1738" y-off="165" x-size="20" y-size="20" custom-ui="1"/>
-      <Window name="PM-300-" visible="0" x-off="-1" y-off="-1" x-size="-1" y-size="-1"/>
-      <Window name="RPM-323" visible="0" x-off="-1" y-off="-1" x-size="-1" y-size="-1"/>
+      <Window name="P-323-397" visible="0" x-off="1738" y-off="165" x-size="20" y-size="20" custom-ui="1"/>
       <Window name="P-323-353" visible="0" x-off="-1" y-off="-1" x-size="-1" y-size="-1" custom-ui="1"/>
       <Window name="P-323-355" visible="0" x-off="-1" y-off="-1" x-size="-1" y-size="-1" custom-ui="1"/>
       <Window name="P-323-356" visible="0" x-off="-1" y-off="-1" x-size="-1" y-size="-1" custom-ui="1"/>
+      <Window name="PM-397-" visible="0" x-off="-1" y-off="-1" x-size="-1" y-size="-1"/>
       <Window name="PM-353-" visible="0" x-off="-1" y-off="-1" x-size="-1" y-size="-1"/>
       <Window name="PM-355-" visible="0" x-off="-1" y-off="-1" x-size="-1" y-size="-1"/>
       <Window name="PM-356-" visible="0" x-off="-1" y-off="-1" x-size="-1" y-size="-1"/>
-      <Window name="P-323-397" visible="0" x-off="1738" y-off="165" x-size="20" y-size="20" custom-ui="1"/>
-      <Window name="PM-397-" visible="0" x-off="-1" y-off="-1" x-size="-1" y-size="-1"/>
       <GUIObjectState>
         <Object id="rtav 54" height="66" visible="1"/>
         <Object id="automation 58" height="66" visible="0"/>
@@ -492,7 +504,7 @@
           <Object id="processor 353"/>
           <Object id="processor 397"/>
         </Object>
-        <Object id="rtav 323" height="322" visible="1" midnam-model-name="Generic" midnam-custom-device-mode="MIDI" color-mode="MeterColors" note-range-min="42" note-range-max="58"/>
+        <Object id="rtav 323" height="322" visible="1" midnam-model-name="Generic" midnam-custom-device-mode="MIDI" color-mode="MeterColors" note-range-min="40" note-range-max="56"/>
         <Object id="automation 327" height="66" visible="0"/>
         <Object id="automation 323 12/0/0" height="66" visible="0"/>
         <Object id="automation 342" height="66" visible="0"/>
